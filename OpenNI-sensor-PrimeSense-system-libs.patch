@@ -1,0 +1,15 @@
+--- PrimeSense-Sensor-50b8b2d/Platform/Linux/Build/XnFormats/Makefile.orig	2012-01-04 12:43:06.000000000 +0100
++++ PrimeSense-Sensor-50b8b2d/Platform/Linux/Build/XnFormats/Makefile	2012-01-24 21:07:46.043643188 +0100
+@@ -1,10 +1,8 @@
+ SRC_FILES = \
+-			../../../../Source/XnFormats/*.cpp \
+-			../../../../Source/External/LibJPEG/*.c
++			../../../../Source/XnFormats/*.cpp
+ 
+ LIB_NAME = XnFormats
+-USED_LIBS = XnCore OpenNI
++USED_LIBS = XnCore OpenNI jpeg
+ DEFINES = XN_FORMATS_EXPORTS
+-INC_DIRS = ../../../../Source/External/LibJPEG
+ 
+ include ../EngineLibMakefile
