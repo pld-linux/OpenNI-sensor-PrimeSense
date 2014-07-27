@@ -1,18 +1,18 @@
 Summary:	PrimeSense Sensor Module for OpenNI framework
 Summary(pl.UTF-8):	Moduł czujnika PrimeSense dla szkieletu OpenNI
 Name:		OpenNI-sensor-PrimeSense
-Version:	5.1.0.41
+Version:	5.1.6.6
 Release:	1
-License:	LGPL v3+
+License:	Apache v2.0
 Group:		Libraries
-Source0:	https://github.com/PrimeSense/Sensor/tarball/Stable-%{version}#/PrimeSense-%{version}.tar.gz
-# Source0-md5:	bed5b928d9299ee5580d12213f13ba41
+Source0:	https://github.com/PrimeSense/Sensor/tarball/Stable-%{version}/PrimeSense-%{version}.tar.gz
+# Source0-md5:	8d4e082acf75964f109039a87feccc78
 Patch0:		%{name}-system-libs.patch
 URL:		http://www.primesense.com/
-BuildRequires:	OpenNI-devel >= 1.3
+BuildRequires:	OpenNI-devel >= 1.5
 BuildRequires:	libjpeg-devel
 BuildRequires:	libstdc++-devel >= 6:4.0
-Requires(post,preun):	OpenNI
+Requires(post,preun):	OpenNI >= 1.5
 # NOTE: other platforms need adding support in OpenNI
 ExclusiveArch:	%{ix86} %{x8664} arm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,7 +47,7 @@ Udev rules for PrimeSense sensors.
 Reguły udev dla czujników PrimeSense.
 
 %prep
-%setup -q -n PrimeSense-Sensor-50b8b2d
+%setup -q -n PrimeSense-Sensor-9108048
 %patch0 -p1
 
 %build
@@ -89,7 +89,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc CHANGES NOTICE README
 %attr(755,root,root) %{_bindir}/XnSensorServer
 %attr(755,root,root) %{_libdir}/libXnCore.so
 %attr(755,root,root) %{_libdir}/libXnDDK.so
