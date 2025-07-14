@@ -48,7 +48,7 @@ Reguły udev dla czujników PrimeSense.
 
 %prep
 %setup -q -n PrimeSense-Sensor-9108048
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} -C Platform/Linux/Build clean
