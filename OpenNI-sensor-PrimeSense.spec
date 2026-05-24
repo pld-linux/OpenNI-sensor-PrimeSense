@@ -2,7 +2,7 @@ Summary:	PrimeSense Sensor Module for OpenNI framework
 Summary(pl.UTF-8):	Moduł czujnika PrimeSense dla szkieletu OpenNI
 Name:		OpenNI-sensor-PrimeSense
 Version:	5.1.6.6
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Libraries
 Source0:	https://github.com/PrimeSense/Sensor/tarball/Stable-%{version}/PrimeSense-%{version}.tar.gz
